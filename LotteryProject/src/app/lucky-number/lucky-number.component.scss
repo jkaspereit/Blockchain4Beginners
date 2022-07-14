@@ -1,0 +1,65 @@
+#page-container {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width: 100%;
+}
+
+#cta-span {
+  font-size: 24px;
+  margin: 1em;
+  text-align: center;
+  text-shadow: 2px 2px 0 black;
+}
+
+#title-span {
+  font-size: 38px;
+  margin: 0.4em;
+  text-align: center;
+  text-shadow: 2px 2px 0 black;
+}
+
+.lno-container {
+  font-family: Effra-Heavy, sans-serif;
+  color: white;
+  border-radius: 8px;
+  background-image: linear-gradient(65deg, rgb(236, 161, 0) 7.5%, rgb(255, 198, 44) 0px, rgb(255, 198, 44) 15%, rgb(248, 180, 0) 0px);
+  width: 300px;
+  height: 400px;
+  outline: solid 2px #ECA100FF;
+}
+
+.lno-user-form {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  margin: 1em;
+}
+
+#luckyNumber { // input-field
+  font-size: 38px;
+  width: 2em;
+  text-align: center;
+}
+
+#lno-button {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 1em;
+  padding: 0.2em;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background: rgb(0, 0, 128);
+}
+
+#lno-button:disabled {
+  background: rgb(103, 103, 133);
+}
+
+#lno-button:hover:enabled {
+  outline: solid white 2px;
+  cursor: pointer;
+}

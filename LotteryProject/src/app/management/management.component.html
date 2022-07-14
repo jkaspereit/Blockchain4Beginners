@@ -1,0 +1,30 @@
+<div id="page-container">
+  <h1 id="title">— Management —</h1>
+  <div id="management-container">
+    <div class="lottery-container">
+      <h2>Lottery</h2>
+      <button class="mgmt-button" (click)="chooseLotteryWinner()">Choose Winner</button>
+      <button class="mgmt-button" (click)="getLotteryPlayers()">Show Players</button>
+      <h3 class="player-count" *ngIf="lotteryPlayers.length > 0">{{lotteryPlayers.length}} Players:</h3>
+      <ul class="player-list" *ngIf="lotteryPlayers.length > 0">
+        <li class="player-item" *ngFor="let player of lotteryPlayers; let i=index">
+          {{player}}
+        </li>
+      </ul>
+    </div>
+    <div class="lottery-container">
+      <h2>Lucky Number</h2>
+      <button class="mgmt-button" (click)="chooseLnoWinner()">Choose Winner</button>
+      <form [formGroup]="getPlayerForm" style="display: flex; flex-direction: row">
+        <button class="mgmt-button" style="width: 8em" [disabled]="!getPlayerForm.valid" (click)="getLnoPlayers()">Show Players</button>
+        <input id="lnoNumberSelector" type="text" style="width: 32px" maxlength="3" formControlName="lnoNumberSelector">
+      </form>
+      <h3 class="player-count" *ngIf="lnoPlayers.length > 0">{{lnoPlayers.length}} Players:</h3>
+      <ul class="player-list" *ngIf="lnoPlayers.length > 0">
+        <li class="player-item" *ngFor="let player of lnoPlayers; let i=index">
+          {{player}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

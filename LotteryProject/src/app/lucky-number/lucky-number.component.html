@@ -1,0 +1,10 @@
+<div id="page-container">
+  <div class="lno-container">
+    <form class="lno-user-form" [formGroup]="getEnterForm" (ngSubmit)="enter()">
+      <span id="title-span">Lucky Number</span>
+      <span id="cta-span">Select yours!</span>
+      <input id="luckyNumber" type="text" maxlength="3" formControlName="luckyNumber">
+      <button id="lno-button" type="submit" [disabled]="!getEnterForm.valid">PLAY!</button>
+    </form>
+  </div>
+</div>

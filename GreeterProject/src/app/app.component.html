@@ -1,0 +1,28 @@
+<div class="center">
+    <h1>
+      {{output}}
+    </h1>
+    <form class="form">
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Input</mat-label>
+        <input type="text" matInput [formControl]="input" placeholder="This input will be delivered to the contract.">
+        <mat-error *ngIf="input.hasError('required')">
+          Input is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      <button type="button" mat-stroked-button class="button" color="primary" [disabled]="input.hasError('required')? true: false" (click)="submit()">
+        Submit
+      </button>
+    </form>
+  <mat-card *ngIf="waitOnTx" class="mat-card">
+    <mat-card-content>
+      <h3>Transaction is being processed.</h3>
+      <mat-progress-bar
+        class="example-margin"
+        color="accent"
+        mode="indeterminate">
+      </mat-progress-bar>
+    </mat-card-content>
+  </mat-card>
+</div>
+

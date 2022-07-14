@@ -1,0 +1,63 @@
+#page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+#title {
+  text-shadow: 0 0 12px #8d8d8d;
+  color: #000000;
+}
+
+#management-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.lottery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em;
+  padding: 1em;
+}
+
+.mgmt-button {
+  padding: 0.2em;
+  margin: 0.4em;
+  width: 10em;
+  font-size: 16px;
+  background: white;
+  border: none;
+  border-radius: 4px;
+  outline: solid 2px black;
+  cursor: pointer;
+}
+
+.mgmt-button:hover {
+  background: #cccccc;
+}
+
+.player-list {
+  width: 10em;
+  padding: 0;
+  margin: 0.4em;
+  list-style-type: none;
+  height: 64px;
+  overflow: hidden;
+  overflow-y: scroll;
+  text-align: left;
+}
+
+.player-count {
+  text-align: left;
+  align-self: start;
+  margin: 0.4em;
+}
+
+.player-item {
+
+}

@@ -1,0 +1,10 @@
+<div id="centering">
+  <div id="page-container">
+    <h1 class="title">Blockchain-Lottery</h1>
+    <div id="card-list">
+      <app-basic-lottery class="card"></app-basic-lottery>
+      <app-lucky-number class="card"></app-lucky-number>
+    </div>
+    <app-management *ngIf="userIsManager()" id="management-interface"></app-management>
+  </div>
+</div>
